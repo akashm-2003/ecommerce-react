@@ -71,6 +71,7 @@ p, button {
   font-size: 1.65rem;
   line-height: 1.5;
   font-weight:400;
+
 }
 
 a {
@@ -99,6 +100,10 @@ ${"" /* resuable code section  */}
 
 }
 
+
+.b{
+  border: 1px solid red;
+}
 .grid-three-column {
   grid-template-columns: repeat(3, 1fr);
 }
