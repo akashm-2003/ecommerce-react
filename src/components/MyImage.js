@@ -8,7 +8,7 @@ const MyImage = ({img=[{url:""}]}) => {
             {
                 img.map((currElm,index)=>{
                     return(
-                        <figure>
+                        <figure key={index}>
                             <img src={currElm.url} alt={currElm.filename} className='box-image--style' key={index} onMouseOver={()=>{
                                 setMainImg(currElm)
                             }} />

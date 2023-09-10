@@ -22,7 +22,7 @@ const ListView = ({filtered_products}) => {
                   <FormatPrice price={price} />
                 </p>
                 <p>{description.slice(0, 90)}...</p>
-                  <Button className="btn"><a href="/">Add to cart</a></Button>
+                  <Button className="btn"><NavLink to="/">Add to cart</NavLink></Button>
               </div>
             </div>
         </NavLink> 

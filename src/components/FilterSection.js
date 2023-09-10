@@ -1,6 +1,7 @@
 import React from 'react'
 import { useFilterContext } from '../context/filter_context';
 import styled from 'styled-components';
+import { Button } from '../styles/Button';
 const FilterSection = () => {
   const { filter: { text,category,color }, updateFilterValue, all_products } = useFilterContext();
 
@@ -104,6 +105,9 @@ const FilterSection = () => {
           );
         })}
       </div>
+    </div>
+    <div className='clear-all-filters'>
+      <Button style={{fontSize:'1.25em',padding:'0.5em'}} type="button" className='btn filter-clear' onClick={()=>{updateFilterValue('','clear')}}>Clear Filters</Button>
     </div>
   </Wrapper>
   )

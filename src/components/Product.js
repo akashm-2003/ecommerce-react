@@ -1,10 +1,11 @@
 import React from 'react'
 import {Button } from "../styles/Button";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import FormatPrice from '../Helpers/FormatPrice';
 import styled from 'styled-components';
 const Product = (product) => {
   const {id,name,price,image,category} = product
+  const navigate =useNavigate()
     return (
 
         <Wrapper>
@@ -19,8 +20,8 @@ const Product = (product) => {
                     <h3>{name}</h3>
                     <span className="card-data--price">{<FormatPrice price={price}/>}</span>
                 </div>
-                <Button className="btn">
-                    <a href="/">Add to cart</a>
+                <Button className="btn" >
+                    <p  onClick={()=>navigate('/singleproduct/${id}')}>Add to cart</p>
                 </Button>
             </div>
         </div>

@@ -46,6 +46,17 @@ const filterReducer = (state, action) => {
             };
         case 'UPDATE_FILTER_VALUE':
             const { value, name } = action.payload;
+            if (name === 'clear') {
+                return {
+                    ...state,
+                    filter: {
+                        text: "",
+                        category: "all",
+                        company: "all",
+                        color: "all"
+                    }
+                }
+            }
             return {
                 ...state,
                 filter: {
@@ -55,26 +66,21 @@ const filterReducer = (state, action) => {
             }
 
         case 'USE_FILTER_SECTION':
-            // console.log(action.payload);
             let all_products = action.payload;
             let tempFilterProduct = [...all_products];
             const { text, category, company, color } = state.filter;
-            console.log(text, category, company, color);
             if (text) {
                 tempFilterProduct = tempFilterProduct.filter((product) => {
-                    // console.log(product.name.toLowerCase().includes(text));
-                    // product.name.toLowerCase().includes(text);
                     return product.name.toLowerCase().includes(text);
                 })
             }
             if (category !== "all") {
                 tempFilterProduct = tempFilterProduct.filter(
-                    (curElem) =>  curElem.category === category
+                    (curElem) => curElem.category === category
                 );
             }
 
             if (company !== "all") {
-                console.log(company);
                 tempFilterProduct = tempFilterProduct.filter(
                     (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
                 );
@@ -85,7 +91,6 @@ const filterReducer = (state, action) => {
             //         curElem.colors.includes(color)
             //     );
             // }
-            console.log(tempFilterProduct);
 
             return {
                 ...state,

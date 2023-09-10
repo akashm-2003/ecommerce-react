@@ -33,10 +33,7 @@ const AppProvider = ({ children }) => {
         catch(error){
             dispatch({type:"API_ERROR"})
         }
-        // console.log(response);
-        // console.log(products);
     }
-    // console.log(state.singleProduct);
 // My second Api call for single product
     const getSingleProduct = async (url)=>{
         dispatch({type:"SET_SINGLE_LOADING"})

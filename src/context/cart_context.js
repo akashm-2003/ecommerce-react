@@ -12,9 +12,17 @@ const CartProvider = ({children}) => {
     const addToCart=(id,mainColor,amount,product)=>{
         dispatch({type:'ADD_TO_CART',payload:{id,mainColor,amount,product}})
     }
-
+    const setAmount=(id,amount,color)=>{
+        dispatch({type:'AMOUNT_TOGGLE',payload:{id,amount,color}})
+    }
+    const removeItem=(id,color)=>{
+        dispatch({type:'REMOVE_ITEM',payload:{id,color}})
+    }
+    const clearCart=()=>{
+        dispatch({type:'CLEAR_CART'})
+    }
     return (
-        <CartContext.Provider value={{...state,addToCart}}>
+        <CartContext.Provider value={{...state,addToCart,setAmount,removeItem,clearCart}}>
             {children}
         </CartContext.Provider>
     )

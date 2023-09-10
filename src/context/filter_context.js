@@ -22,7 +22,6 @@ const FilterContextProvider = ({ children }) => {
 
     const { products } = useProductContext();
     const [state, dispatch] = useReducer(reducer, initialState);
-    // console.log(state);
     const setGridView = (setGrid) => {
         return dispatch({ type: "SET_GRID_VIEW", payload: setGrid })
     }
@@ -31,7 +30,6 @@ const FilterContextProvider = ({ children }) => {
         return dispatch({ type: "GET_SORT_VALUE", payload:filter })
     }
     const updateFilterValue = (value, name) => {
-        console.log(value, name);
         return dispatch({ type: "UPDATE_FILTER_VALUE", payload: { value, name } })
     }
     useEffect(() => {

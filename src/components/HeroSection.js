@@ -2,17 +2,17 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import {Button} from '../styles/Button'
+import heroImage from '../images/hero.jpg'
 const HeroSection = ({data}) => {
     const {title}=data;
-    console.log(data.title);
   return (
     <Wrapper>
         <div className="container">
             <div className="grid grid-two-column">
                 <div className="hero-section-data">
+                        <h1> {title}</h1>
                     <p className="intro-data">
                         Welcome to
-                        <h1> {title}</h1>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi laboriosam cumque, dolore nesciunt facere eveniet incidunt minus voluptatibus aut libero dolor unde similique alias soluta possimus, tempore modi sunt explicabo
                     </p><br/>
                     <NavLink to='/products'>
@@ -22,7 +22,7 @@ const HeroSection = ({data}) => {
                 {/* HeroSection Image */}
                 <div className="hero-section-image">
                     <figure>
-                        <img src="images/hero.jpg" alt="hero section image" className='img-style' />
+                        <img src={heroImage} alt="hero section image" className='img-style' />
                     </figure>
                 </div>
             </div>

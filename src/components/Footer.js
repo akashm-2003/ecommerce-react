@@ -43,11 +43,11 @@ const Footer = () => {
                                 <FaInstagram className="icons" />
                             </div>
                             <div>
-                                <a
-                                    href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                                    target="_blank" rel="noreferrer">
+                                <NavLink
+                                    to="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                                    >
                                     <FaYoutube className="icons" />
-                                </a>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

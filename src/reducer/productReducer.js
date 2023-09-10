@@ -1,5 +1,4 @@
 const ProductReducer =(state, action) =>{
-    // console.log(action);
     if(action.type === "SET_LOADING"){
         return {...state, isLoading:true,isError:true}
     }

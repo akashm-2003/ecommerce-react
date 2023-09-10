@@ -29,9 +29,6 @@ const customStyles = {
 const Sort = ({ grid_view, setGridView, filtered_products }) => {
   const [selectedOption, setSelectedOption] = useState({value: 'lowest', label: 'Lowest'});
   const {sorting} = useFilterContext();
-  // console.log(selectedOption.value);
-  
-  // console.log(selectedOption);
   useEffect(() => {
     sorting(selectedOption.value)
   },[selectedOption])

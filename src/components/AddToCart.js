@@ -26,7 +26,7 @@ const AddToCart = ({product}) => {
                 {colors.map((curColor, index) => {
                     return (
                         <button
-                            key={index}
+                            key={curColor}
                             style={{ background: curColor }}
                             className={curColor===  mainColor ? "btnStyle active" : "btnStyle"}
                             onClick={() => setMainColor(curColor)}   >
