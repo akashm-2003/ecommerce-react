@@ -28,7 +28,7 @@ const FilterSection = () => {
   //     return newVal;
   //   }
   // }
-  // we need unique category data
+  // we need unique category data from all products
   const categoryData = getUniqueData(all_products, 'category');
   const companyData = getUniqueData(all_products, 'company');
   const colorsData = getUniqueData(all_products, 'colors');
