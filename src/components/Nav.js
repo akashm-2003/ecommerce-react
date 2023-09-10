@@ -78,7 +78,7 @@ const NavStyle = styled.nav`
           font-weight: 500;
           text-transform: uppercase;
           color: ${({ theme }) => theme.colors.black};
-          transition: color 0.3s linear;
+          transition: color 3s linear;
         }
 
         &:hover,
@@ -180,7 +180,7 @@ const NavStyle = styled.nav`
         opacity: 0;
         transform: translateX(100%);
         /* transform-origin: top; */
-        transition: all 3s linear;
+        transition: all 0.5s linear;
       }
 
       .active .navbar-lists {
@@ -189,7 +189,7 @@ const NavStyle = styled.nav`
         transform: translateX(0);
         z-index: 999;
         transform-origin: right;
-        transition: all 3s linear;
+        transition: all 0.5s linear;
 
         .navbar-link {
           font-size: 4.2rem;
