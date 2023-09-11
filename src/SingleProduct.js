@@ -8,20 +8,22 @@ import FormatPrice from "./Helpers/FormatPrice";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import Spinner from "./components/Spinner";
-import math from "mathjs";
-// import { round } from "mathjs";
 import Stars from "./components/Stars";
 import AddToCart from "./components/AddToCart";
 const SingleProduct = () =>{
   // id: ID is alias name
+  const {singleProduct,getSingleProduct,isSingleLoading}=useProductContext();
   const {id:productId} = useParams();
   const API =`https://api.pujakaitem.com/api/products`
-  const {singleProduct,getSingleProduct,isSingleLoading}=useProductContext();
-  useEffect(() => {
+  const runApi=async()=>{
     getSingleProduct(`${API}?id=${productId}`);
+  }
+  useEffect(() => {
+    runApi()
+    // eslint-disable-next-line
   },[])
   
-  const {id,name,price,company,colors,description,category,stock,reviews,stars,image}=singleProduct;
+  const {id,name,price,company,description,stock,reviews,stars,image}=singleProduct;
   return(
     <Wrapper>
       <PageNavigation title={name}/>

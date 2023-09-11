@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useFilterContext } from '../context/filter_context';
 import styled from 'styled-components';
 import { Button } from '../styles/Button';

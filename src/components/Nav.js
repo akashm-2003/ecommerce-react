@@ -8,7 +8,6 @@ import { useCartContext } from "../context/cart_context";
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState();
   const {total_items}=useCartContext()
-  
 
   return (
     <NavStyle>

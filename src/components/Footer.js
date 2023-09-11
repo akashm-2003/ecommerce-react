@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import { Button } from '../styles/Button';
 import { NavLink } from 'react-router-dom';
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
