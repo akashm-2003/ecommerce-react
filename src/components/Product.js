@@ -5,6 +5,7 @@ import FormatPrice from '../Helpers/FormatPrice';
 import styled from 'styled-components';
 const Product = (product) => {
   const {id,name,price,image,category} = product
+
   const navigate =useNavigate()
     return (
 
